@@ -2,7 +2,7 @@ import math
 import time
 
 from .defs import Result, SumOfSquares
-from typing import Any, Collection
+from typing import Collection
 
 def ss(x: Collection[int|float], y: Collection[int|float]) -> Result[SumOfSquares]:
     if not isinstance(x, Collection) or not isinstance(y, Collection):
