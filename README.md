@@ -1,6 +1,7 @@
 # Zahlen
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![Workflow Status](https://github.com/Hkaar/Zahlen/workflows/CI/badge.svg)
 
 A python cli utility for doing math
 
@@ -25,14 +26,40 @@ Go to the app directory
 cd Zahlen
 ```
 
+Initialize the environment
+
+```bash
+poetry shell
+```
+
 Install the dependecies
 
 ```bash
 poetry install
 ```
 
-Then run it
+If you don't have poetry, follow these steps instead!
+
+Set up the environment
 
 ```bash
-python src
+python -m venv venv
+```
+
+`Windows:`
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+`Linux/MacOS:`
+
+```bash
+source ./venv/bin/activate
+```
+
+Install the dependecies without poetry
+
+```bash
+pip install -r requirements.txt
 ```
