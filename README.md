@@ -1,6 +1,7 @@
 # Zahlen
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![Workflow Status](https://github.com/Hkaar/Zahlen/workflows/CI/badge.svg)
 
 A python cli utility for doing math
 
