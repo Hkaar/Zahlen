@@ -2,7 +2,7 @@
 # Author : Hkaar
 
 from dataclasses import dataclass, field
-from typing import Any, Generic, Optional, TypeVar
+from typing import Generic, Optional, TypeVar
 
 T = TypeVar('T')
 
