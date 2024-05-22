@@ -26,14 +26,40 @@ Go to the app directory
 cd Zahlen
 ```
 
+Initialize the environment
+
+```bash
+poetry shell
+```
+
 Install the dependecies
 
 ```bash
 poetry install
 ```
 
-Then run it
+If you don't have poetry, follow these steps instead!
+
+Set up the environment
 
 ```bash
-python src
+python -m venv venv
+```
+
+`Windows:`
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+`Linux/MacOS:`
+
+```bash
+source ./venv/bin/activate
+```
+
+Install the dependecies without poetry
+
+```bash
+pip install -r requirements.txt
 ```
