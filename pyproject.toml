@@ -7,10 +7,20 @@ license = "Apache 2.0 License"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-pytest = "^8.2.0"
-numpy = "^1.26.4"
+python = ">=3.11"
+numpy = ">=1.26.4"
 
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.2.1"
+mypy = "*"
+pytest-cov = ">=5.0.0"
+ruff = "*"
+
+[tool.pytest]
+pythonpath = "./src"
+
+[tool.mypy]
+mypy_path = "./src"
 
 [build-system]
 requires = ["poetry-core"]
