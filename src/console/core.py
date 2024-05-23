@@ -16,13 +16,15 @@ class Console(ConsoleInterface):
         self._commands: Dict[str, Callable] = {}
         self.shell_active = False
 
-        self._import(".commands", "src.console")
+        self._import(".commands", ".console")
 
-    def parse(self):
+    def parse(self) -> Result[bool]:
         """Execute the console command based on the given arguments"""
 
         args = self._parser.parse_args()
         args.func(args)
+
+        return Result(True)
 
     def exec_(self, cmd: str, *args) -> Result[bool]:
         if cmd not in self._commands:
@@ -43,7 +45,7 @@ class Console(ConsoleInterface):
         self._commands[name] = handler
         return Result(ok=subparser)
     
-    def shell(self):
+    def shell(self) -> Result[bool]:
         self.shell_active = True
 
         while self.shell_active:
@@ -54,6 +56,8 @@ class Console(ConsoleInterface):
                 continue
             
             print(ValueError(f"Command {user_cmd[0]} does not exist!"))
+
+        return Result(True)
 
     def _import(self, path: str, package: Optional[str] = None) -> Result[bool]:
         """Automatically import all the included commands within the given path"""
