@@ -20,7 +20,7 @@ class ConsoleInterface(ABC):
     """The abstract interface for the console class"""
     
     @abstractmethod
-    def parse(self):
+    def parse(self) -> Result[bool]:
         ...
 
     @abstractmethod
@@ -32,7 +32,7 @@ class ConsoleInterface(ABC):
         ...
 
     @abstractmethod
-    def shell(self):
+    def shell(self) -> Result[bool]:
         ...
 
     @abstractmethod
